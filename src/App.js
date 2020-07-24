@@ -1,10 +1,17 @@
 import React from 'react';
 import HomePage from './components/HomePage/HomePage';
+import { Switch,Route } from 'react-router-dom'
+import DeskTops from './components/DeskTops/DeskTops';
 
 function App() {
   return (
     <>
-      <HomePage/>
+      <Switch>
+        <Route exact path='/' component={HomePage}></Route>
+      <Route exact path='/desktops' component={DeskTops}></Route>
+      </Switch>
+      
+      
     </>
   );
 }
