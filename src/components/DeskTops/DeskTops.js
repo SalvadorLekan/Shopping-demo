@@ -1,4 +1,5 @@
 import React from 'react'
+import './DeskTop.scss'
 
 function DeskTops() {
     return (
