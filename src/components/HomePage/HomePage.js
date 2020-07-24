@@ -21,7 +21,7 @@ function HomePage(props) {
     return (
         <div>
             <ItemGroup list={firstList} title='Products' />
-            <ItemGroup list={[{name: 'Gadgets', imgname:'gadget.jpg', id:'nn',large:'large', linkto:'gadgets'},{name: 'Accessories', imgname:'accessories.jpg', id:'n', large:'large', linkto:'gadgets'}]} title='Categories' />
+            <ItemGroup list={[{name: 'Gadgets', imgname:'gadget.jpg', id:'nn',large:'large', linkto:'gadgets'},{name: 'Accessories', imgname:'accessories.jpg', id:'n', large:'large', linkto:'accessories'}]} title='Categories' />
         </div>
     )
 }
