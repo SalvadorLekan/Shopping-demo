@@ -7,7 +7,7 @@ function ItemGroup({title, list, }) {
         <div className='item-group'>
             <h2>{title}</h2>
             <div className='item-flex'>
-                {list.map(lst=><ItemCard key={lst.id} name={lst.name} imgname={lst.imgname} large={lst.large} linkto={lst.linkto}/>)}
+                {list.map(({id, ...someProp})=><ItemCard key={id} {...someProp}/>)}
             </div>
             
         </div>
