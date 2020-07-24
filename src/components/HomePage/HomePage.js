@@ -3,7 +3,7 @@ import './HomePage.scss'
 import ItemGroup from '../ItemGroup/ItemGroup'
 
 const firstList= [
-    {name:'Desktops', imgname:'desktop.jpg', id:'Desktop', linkto:'Desktop'},
+    {name:'Desktops', imgname:'desktop.jpg', id:'Desktop', linkto:'Desktops'},
     {name:'Laptops', imgname:'laptop.jpg', id:'laptops', linkto:'laptops'},
     {name:'Tablets', imgname:'tablet.jpg', id:'Tablets', linkto:'Tablets'},
     {name:'Phones', imgname:'phone.jpg', id:'Phones', linkto:'Phones'},
