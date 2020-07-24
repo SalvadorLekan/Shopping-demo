@@ -1,0 +1,13 @@
+.item-group{
+    padding: 0.5em;
+
+    h2{margin: 0.5em;}
+
+    .item-flex{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+}

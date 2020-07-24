@@ -1,10 +1,17 @@
 import React from 'react'
 import './ItemCard.scss'
 
-function ItemCard() {
+
+function ItemCard(props) {
     return (
-        <div>
-            
+        <div className={`item-box ${props.large}`}>
+            <img
+            src={`./Images/${props.imgname}`} 
+            alt={props.name}
+            />
+            <div className='inner-item'>
+                <h3>{props.name}</h3>
+            </div>
         </div>
     )
 }
