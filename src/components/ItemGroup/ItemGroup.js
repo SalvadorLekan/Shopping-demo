@@ -2,12 +2,12 @@ import React from 'react'
 import './ItemGroup.scss'
 import ItemCard from '../ItemCard/ItemCard'
 
-function ItemGroup(props) {
+function ItemGroup({title, list, }) {
     return (
         <div className='item-group'>
-            <h2>{props.title}</h2>
+            <h2>{title}</h2>
             <div className='item-flex'>
-                {props.list.map(lst=><ItemCard key={lst.id} history={props.history} name={lst.name} imgname={lst.imgname} large={lst.large} linkto={lst.linkto}/>)}
+                {list.map(lst=><ItemCard key={lst.id} name={lst.name} imgname={lst.imgname} large={lst.large} linkto={lst.linkto}/>)}
             </div>
             
         </div>

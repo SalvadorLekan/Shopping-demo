@@ -1,21 +1,22 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import './ItemCard.scss'
 
 
-function ItemCard(props) {
+function ItemCard({large, linkto, imgname, name, history}) {
     return (
         <div 
-        className={`item-box ${props.large}`}
-        onClick={()=> props.history.push(`${props.linkto}`)}>
+        className={`item-box ${large}`}
+        onClick={()=> history.push(`${linkto}`)}>
             <img
-            src={`./Images/${props.imgname}`} 
-            alt={props.name}
+            src={`./Images/${imgname}`} 
+            alt={name}
             />
             <div className='inner-item'>
-                <h3>{props.name}</h3>
+                <h3>{name}</h3>
             </div>
         </div>
     )
 }
 
-export default ItemCard
+export default withRouter(ItemCard)
