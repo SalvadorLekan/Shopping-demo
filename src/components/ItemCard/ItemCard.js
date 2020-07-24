@@ -4,7 +4,9 @@ import './ItemCard.scss'
 
 function ItemCard(props) {
     return (
-        <div className={`item-box ${props.large}`}>
+        <div 
+        className={`item-box ${props.large}`}
+        onClick={()=> props.history.push(`${props.linkto}`)}>
             <img
             src={`./Images/${props.imgname}`} 
             alt={props.name}
