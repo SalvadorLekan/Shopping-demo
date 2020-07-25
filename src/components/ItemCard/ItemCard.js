@@ -7,7 +7,7 @@ function ItemCard({large, linkto, imgname, name, history}) {
     return (
         <div 
         className={`item-box ${large}`}
-        onClick={()=> history.push(`${linkto}`)}>
+        onClick={()=> history.push(`shop/${linkto}`)}>
             <img
             src={`./Images/${imgname}`} 
             alt={name}
