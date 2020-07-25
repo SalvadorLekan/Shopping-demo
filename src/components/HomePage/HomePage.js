@@ -20,8 +20,8 @@ const firstList= [
 function HomePage(props) {
     return (
         <div>
-            <ItemGroup list={firstList} title='Products' />
-            <ItemGroup list={[{name: 'Gadgets', imgname:'gadget.jpg', id:'nn',large:'large', linkto:'gadgets'},{name: 'Accessories', imgname:'accessories.jpg', id:'n', large:'large', linkto:'accessories'}]} title='Categories' />
+            <ItemGroup list={firstList} title='Products' titleLink='shop'/>
+            <ItemGroup list={[{name: 'Gadgets', imgname:'gadget.jpg', id:'nn',large:'large', linkto:'gadgets'},{name: 'Accessories', imgname:'accessories.jpg', id:'n', large:'large', linkto:'accessories'}]} title='Categories' titleLink='categories'/>
         </div>
     )
 }
