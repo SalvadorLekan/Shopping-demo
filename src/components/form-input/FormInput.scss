@@ -1,0 +1,16 @@
+.form-label{
+    display: flex;
+    flex-direction: column;
+
+    input{
+        height: 1em;
+        border: 0;
+        border-bottom: 1px solid black;
+
+        &:focus{
+            border-bottom: 2px solid blue;
+            height: 2em;
+            outline: blue;
+        }
+    }
+}

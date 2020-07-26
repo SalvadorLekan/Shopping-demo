@@ -5,7 +5,7 @@ function CostumForm({children, submitFunction}) {
     return (
         <form 
         className='form'
-        onClick={(e)=>{
+        onSubmit={(e)=>{
             e.preventDefault()
             submitFunction()
         }}
