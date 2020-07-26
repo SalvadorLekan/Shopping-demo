@@ -5,12 +5,16 @@ import Btn from '../btn/Btn'
 
 function SignIn() {
     const [value, setvalue] = useState('')
+    const [mail, setmail] = useState('')
+    const [password, setpassword] = useState('')
+    const [confirm, setconfirm] = useState('')
     return (
         <div>
             <CostumForm submitFunction={()=>console.log('object')}>
                 <FormInput name='text' type='text' svalue={value} changevalue={setvalue} required>Name</FormInput>
-                <FormInput name='password' type='password' svalue={value} changevalue={setvalue}>Password</FormInput>
-                <FormInput name='confirmpassword' type='password' svalue={value} changevalue={setvalue}>Confirm Password</FormInput>
+                <FormInput name='mail' type='email' svalue={mail} changevalue={setmail} required>Name</FormInput>
+                <FormInput name='password' type='password' svalue={password} changevalue={setpassword}>Password</FormInput>
+                <FormInput name='confirmpassword' type='password' svalue={confirm} changevalue={setconfirm}>Confirm Password</FormInput>
                 <Btn>Sign Up</Btn>
             </CostumForm>
         </div>
