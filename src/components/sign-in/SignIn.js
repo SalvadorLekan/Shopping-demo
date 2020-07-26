@@ -13,8 +13,8 @@ function SignIn() {
             <CostumForm submitFunction={()=>console.log('object')}>
                 <FormInput name='text' type='text' svalue={value} changevalue={setvalue} required>Name</FormInput>
                 <FormInput name='mail' type='email' svalue={mail} changevalue={setmail} required>Email</FormInput>
-                <FormInput name='password' type='password' svalue={password} changevalue={setpassword}>Password</FormInput>
-                <FormInput name='confirmpassword' type='password' svalue={confirm} changevalue={setconfirm}>Confirm Password</FormInput>
+                <FormInput name='password' type='password' svalue={password} changevalue={setpassword} required>Password</FormInput>
+                <FormInput name='confirmpassword' type='password' svalue={confirm} changevalue={setconfirm} required>Confirm Password</FormInput>
                 <Btn>Sign Up</Btn>
             </CostumForm>
         </div>
