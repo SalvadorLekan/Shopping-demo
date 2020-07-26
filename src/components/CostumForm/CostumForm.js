@@ -1,8 +1,15 @@
 import React from 'react'
+import './CostumForm.scss'
 
-function CostumForm({children,...otherProps}) {
+function CostumForm({children, submitFunction}) {
     return (
-        <form>
+        <form 
+        className='form'
+        onClick={(e)=>{
+            e.preventDefault()
+            submitFunction()
+        }}
+        >
             {children}
         </form>
     )
