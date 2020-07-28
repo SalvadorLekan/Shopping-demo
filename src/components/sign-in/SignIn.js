@@ -3,6 +3,7 @@ import CostumForm from '../CostumForm/CostumForm'
 import FormInput from '../form-input/FormInput'
 import './Signin.scss'
 import Btn from '../btn/Btn'
+import { siginwithGoogle } from '../../firebase/FireBaseUtil'
 
 function SignIn() {
     const [value, setvalue] = useState('')
@@ -19,13 +20,15 @@ function SignIn() {
                 <FormInput name='mail' type='email' svalue={mail} changevalue={setmail} required>Email</FormInput>
                 <FormInput name='password' type='password' svalue={password} changevalue={setpassword} required>Password</FormInput>
                 <FormInput name='confirmpassword' type='password' svalue={confirm} changevalue={setconfirm} required>Confirm Password</FormInput>
-                <Btn>Sign Up</Btn>
+                <Btn type='submit'>Sign Up</Btn>
+                <Btn type='button' click={siginwithGoogle}>Google Sign Up</Btn>
             </CostumForm>
             <CostumForm submitFunction={()=>console.log('object')}>
                 <h3 className='h3'>Sign In</h3>
             <FormInput name='mail' type='email' svalue={inmail} changevalue={setinmail} required>Email</FormInput>
                 <FormInput name='password' type='password' svalue={inpassword} changevalue={setinpassword} required>Password</FormInput>
-                <Btn>Sign In</Btn>
+                <Btn type='submit'>Sign In</Btn>
+                <Btn type='button'click={siginwithGoogle}>Google Sign In</Btn>
             </CostumForm>
         </div>
     )
