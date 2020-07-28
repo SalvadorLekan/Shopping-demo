@@ -15,20 +15,20 @@ function SignIn() {
     return (
         <div className='signin'>
             <CostumForm submitFunction={()=>console.log('object')}>
+                <h3 className='h3'>Sign In</h3>
+            <FormInput name='mail' type='email' svalue={inmail} changevalue={setinmail} required>Email</FormInput>
+                <FormInput name='password' type='password' svalue={inpassword} changevalue={setinpassword} required>Password</FormInput>
+                <div className='wrap-flex'><Btn type='submit'>Sign In</Btn>
+                <Btn type='button'click={siginwithGoogle}>Google Sign In</Btn></div>
+            </CostumForm>
+            <CostumForm submitFunction={()=>console.log('object')}>
                 <h3 className='h3'>Sign Up</h3>
                 <FormInput name='text' type='text' svalue={value} changevalue={setvalue} required>Name</FormInput>
                 <FormInput name='mail' type='email' svalue={mail} changevalue={setmail} required>Email</FormInput>
                 <FormInput name='password' type='password' svalue={password} changevalue={setpassword} required>Password</FormInput>
                 <FormInput name='confirmpassword' type='password' svalue={confirm} changevalue={setconfirm} required>Confirm Password</FormInput>
-                <Btn type='submit'>Sign Up</Btn>
-                <Btn type='button' click={siginwithGoogle}>Google Sign Up</Btn>
-            </CostumForm>
-            <CostumForm submitFunction={()=>console.log('object')}>
-                <h3 className='h3'>Sign In</h3>
-            <FormInput name='mail' type='email' svalue={inmail} changevalue={setinmail} required>Email</FormInput>
-                <FormInput name='password' type='password' svalue={inpassword} changevalue={setinpassword} required>Password</FormInput>
-                <Btn type='submit'>Sign In</Btn>
-                <Btn type='button'click={siginwithGoogle}>Google Sign In</Btn>
+                <div className='wrap-flex'><Btn type='submit'>Sign Up</Btn>
+                <Btn type='button' click={siginwithGoogle}>Google Sign Up</Btn></div>
             </CostumForm>
         </div>
     )

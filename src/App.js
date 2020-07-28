@@ -4,10 +4,25 @@ import { Switch,Route } from 'react-router-dom'
 import DeskTops from './components/DeskTops/DeskTops';
 import Shop from './components/Shop/Shop';
 import SignIn from './components/sign-in/SignIn';
+import {auth} from './firebase/FireBaseUtil'
+import Nav from './components/Nav/Nav';
 
-function App() {
-  return (
+ class App extends React.Component {
+ constructor(props) {
+   super(props)
+ 
+   this.state = {
+      CurrentUser: null
+   }
+ }
+ 
+ componentDidMount(){
+   auth.onAuthStateChanged(user=>this.setState({CurrentUser: user}, console.log(user  )))
+ }
+
+ render(){ return (
     <>
+      <Nav userstate={this.state.CurrentUser}/>
       <Switch>
         <Route exact path='/' component={HomePage}></Route>
         <Route exact path='/shop' component={Shop}></Route>
@@ -17,7 +32,7 @@ function App() {
       
       
     </>
-  );
+  );}
 }
 
 export default App;
