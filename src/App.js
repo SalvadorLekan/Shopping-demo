@@ -15,11 +15,13 @@ import Nav from './components/Nav/Nav';
       CurrentUser: null
    }
  }
- 
+    unSubAuth= null;
  componentDidMount(){
-   auth.onAuthStateChanged(user=>this.setState({CurrentUser: user}, console.log(user  )))
+   this.unSubAuth=auth.onAuthStateChanged(user=>this.setState({CurrentUser: user}, console.log(user  )))
  }
-
+ componentWillUnmount(){
+   this.unSubAuth()
+ }
  render(){ return (
     <>
       <Nav userstate={this.state.CurrentUser}/>

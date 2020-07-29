@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import './Nav.scss'
 import { Link } from 'react-router-dom'
+import { auth } from '../../firebase/FireBaseUtil';
 
 function Nav({userstate}) {
     const [ClassName, setClassName] = useState('')
@@ -26,7 +27,7 @@ function Nav({userstate}) {
                     <li><Link to='/'>Services</Link></li>
                     <li>{
                         userstate?
-                            <div className='a'>Sign Out</div>:
+                            <div className='a' onClick={()=>auth.signOut()}>Sign Out</div>:
                             <Link to='/signin'>Sign In</Link>}</li>
                 </ul>
             </div>
