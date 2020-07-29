@@ -4,7 +4,7 @@ import { Switch,Route } from 'react-router-dom'
 import DeskTops from './components/DeskTops/DeskTops';
 import Shop from './components/Shop/Shop';
 import SignIn from './components/sign-in/SignIn';
-import {auth} from './firebase/FireBaseUtil'
+import {auth, createUserProfile} from './firebase/FireBaseUtil'
 import Nav from './components/Nav/Nav';
 
  class App extends React.Component {
@@ -17,7 +17,19 @@ import Nav from './components/Nav/Nav';
  }
     unSubAuth= null;
  componentDidMount(){
-   this.unSubAuth=auth.onAuthStateChanged(user=>this.setState({CurrentUser: user}, console.log(user  )))
+   this.unSubAuth= auth.onAuthStateChanged(async user=>{
+    if (user) {
+      const userRef= await createUserProfile(user)
+     userRef.onSnapshot(
+       snap=>
+        this.setState({CurrentUser:{
+          id:user.uid,
+          ...snap.data()
+
+      }}))
+    }else{this.setState({CurrentUser:user})}
+  
+  })
  }
  componentWillUnmount(){
    this.unSubAuth()
