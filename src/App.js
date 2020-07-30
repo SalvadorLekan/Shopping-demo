@@ -36,7 +36,7 @@ import Nav from './components/Nav/Nav';
  }
  render(){ return (
     <>
-      <Nav userstate={this.state.CurrentUser}/>
+      <Nav/>
       <Switch>
         <Route exact path='/' component={HomePage}></Route>
         <Route exact path='/shop' component={Shop}></Route>

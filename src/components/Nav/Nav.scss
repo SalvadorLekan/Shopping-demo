@@ -2,6 +2,7 @@
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 10;
 
     .container{
         max-width: 1200px;
@@ -56,6 +57,7 @@
     .navlinks{
         flex-direction: column;
         width: 100vw;
+        box-shadow: 0 3px 3px;
     }
     .navTrigger {
         display: block;

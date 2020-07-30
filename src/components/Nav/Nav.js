@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './Nav.scss'
 import { Link } from 'react-router-dom'
 import { auth } from '../../firebase/FireBaseUtil';
+import { connect } from 'react-redux';
 
 function Nav({userstate}) {
     const [ClassName, setClassName] = useState('')
@@ -35,5 +36,11 @@ function Nav({userstate}) {
     </nav>
     )
 }
+const mapStateToProps = (state) => ({
+    userstate: state.user.userReducer
+})
 
-export default Nav
+
+
+
+export default connect(mapStateToProps)(Nav)
